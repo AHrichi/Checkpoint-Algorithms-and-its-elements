@@ -4,20 +4,19 @@ VAR
     t:STRING:={"o","i","y","e","a","u"};
     i:INTEGER;
     j:INTEGER;
-    cntr_1:INTEGER:=0;
     cntr_2:INTEGER:=1;
     cntr_3:INTEGER:=0;
 BEGIN
     REPEAT
         read (s)
     UNTIL (s[s.length-1]=".") ;
-    write ("The length of the sentence is,"s.length);
+    write ("The length of the sentence is,"+s.length);
     FOR i FROM 0 TO s.length-1 STEP 1  DO
         IF (s[i]=" ") THEN
             cntr_2=cntr_2+1;
         END_IF
     END_FOR
-    write("The number of words in the sentence,"cntr_2);
+    write("The number of words in the sentence,"+cntr_2);
     FOR i FROM 0 TO s.length-1 STEP 1  DO
         FOR j FROM 0 TO t.length-1 STEP 1  DO
             IF (s[i]=t[j]) THEN
@@ -25,5 +24,5 @@ BEGIN
             END_IF
         END_FOR
     END_FOR
-    write("The number of vowels in the sentence,"cntr_3);
+    write("The number of vowels in the sentence,"+cntr_3);
 END
